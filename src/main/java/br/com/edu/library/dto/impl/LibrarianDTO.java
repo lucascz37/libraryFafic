@@ -6,7 +6,7 @@ import lombok.Setter;
 
 @Getter
 @Setter
-public class LibrarianDTO extends GenericDTO<Librarian>{
+public class LibrarianDTO extends PersonDTO<Librarian>{
 
     public LibrarianDTO() {
         super(Librarian.class);
