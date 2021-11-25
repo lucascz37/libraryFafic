@@ -1,4 +1,4 @@
-package ServiceAndRepository;
+package br.com.edu.library.ServiceAndRepository;
 
 
 import br.com.edu.library.LibraryManagerApplication;

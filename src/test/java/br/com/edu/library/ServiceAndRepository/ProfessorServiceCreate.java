@@ -1,4 +1,4 @@
-package ServiceAndRepository;
+package br.com.edu.library.ServiceAndRepository;
 
 
 import br.com.edu.library.LibraryManagerApplication;
@@ -40,7 +40,7 @@ public class ProfessorServiceCreate {
         Contact contact = new Contact();
 
         contact.setEmail("ana@gmail.com");
-        contact.setPhone("83999999994");
+        contact.setPhone("8399999");
 
         teacherCourse.setName("Teste1");
         teacherCourse.setField("Exatas");
@@ -54,7 +54,7 @@ public class ProfessorServiceCreate {
         professor1.setAddress(address);
         professor1.setPassword("ana12");
         professor1.setTeacherCourse(teacherCourse);
-        professor1.setRegistration("1231234");
+        professor1.setRegistration("123");
         professor1.setLibrary(library);
         professor1.setContact(contact);
 
