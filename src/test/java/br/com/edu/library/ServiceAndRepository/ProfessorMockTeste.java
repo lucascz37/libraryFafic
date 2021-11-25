@@ -1,4 +1,4 @@
-package ServiceAndRepository;
+package br.com.edu.library.ServiceAndRepository;
 import br.com.edu.library.LibraryManagerApplication;
 import br.com.edu.library.domain.Professor;
 import br.com.edu.library.repository.ProfessorRepository;
