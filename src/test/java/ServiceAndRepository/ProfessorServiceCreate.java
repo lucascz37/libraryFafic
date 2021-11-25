@@ -26,7 +26,7 @@ public class ProfessorServiceCreate {
     private LibraryService libraryService;
 
     @Test
-    public void testCreate(){
+    public void testCreate() throws Exception{
         Professor professor1 = new Professor();
         Library library = new Library();
         library.setName("FaficBiblio");
@@ -39,22 +39,22 @@ public class ProfessorServiceCreate {
 
         Contact contact = new Contact();
 
-        contact.setEmail("aaaaa@gmail.com");
-        contact.setPhone("8399999999");
+        contact.setEmail("ana@gmail.com");
+        contact.setPhone("83999999994");
 
-        teacherCourse.setName("Testes");
+        teacherCourse.setName("Teste1");
         teacherCourse.setField("Exatas");
         address.setUf("PB");
-        address.setNumber("12");
-        address.setDistrict("Caja");
-        address.setStreet("Rua");
-        professor1.setName("Leuson");
-        professor1.setCpf("123");
+        address.setNumber("13");
+        address.setDistrict("Cajazeiras");
+        address.setStreet("Rua1");
+        professor1.setName("Ana");
+        professor1.setCpf("1234");
         professor1.setGender(Gender.FEMALE);
         professor1.setAddress(address);
-        professor1.setPassword("ana123");
+        professor1.setPassword("ana12");
         professor1.setTeacherCourse(teacherCourse);
-        professor1.setRegistration("123123");
+        professor1.setRegistration("1231234");
         professor1.setLibrary(library);
         professor1.setContact(contact);
 
