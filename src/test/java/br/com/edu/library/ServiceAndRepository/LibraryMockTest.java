@@ -16,7 +16,7 @@ import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
 
 @SpringBootTest(classes = LibraryManagerApplication.class)
-public class LibraryMockTeste {
+public class LibraryMockTest {
 
     @MockBean
     private LibraryService service;

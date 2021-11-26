@@ -11,7 +11,7 @@ import org.springframework.boot.test.context.SpringBootTest;
 import static org.assertj.core.api.AssertionsForClassTypes.assertThat;
 
 @SpringBootTest(classes = LibraryManagerApplication.class)
-public class LibraryServiceCreate {
+public class LibraryServiceCreateTest {
 
  //sem mock
 

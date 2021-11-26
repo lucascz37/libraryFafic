@@ -15,7 +15,7 @@ import static org.mockito.Mockito.when;
 
 
 @SpringBootTest(classes = LibraryManagerApplication.class)
-public class ProfessorMockTeste {
+public class ProfessorMockTest {
 
     @Autowired
     private ProfessorService service;

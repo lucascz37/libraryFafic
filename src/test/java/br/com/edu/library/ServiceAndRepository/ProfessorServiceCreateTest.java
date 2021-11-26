@@ -17,7 +17,7 @@ import org.springframework.boot.test.context.SpringBootTest;
 import static org.assertj.core.api.AssertionsForClassTypes.assertThat;
 
 @SpringBootTest(classes = LibraryManagerApplication.class)
-public class ProfessorServiceCreate {
+public class ProfessorServiceCreateTest {
 
     @Autowired
     private ProfessorService service;

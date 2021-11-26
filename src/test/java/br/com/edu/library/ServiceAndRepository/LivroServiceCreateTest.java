@@ -16,7 +16,7 @@ import java.util.UUID;
 import static org.assertj.core.api.AssertionsForClassTypes.assertThat;
 
 @SpringBootTest(classes = LibraryManagerApplication.class)
-public class LivroServiceCreate {
+public class LivroServiceCreateTest {
 
     @Autowired
     private BookService service;

@@ -1,7 +1,5 @@
 package br.com.edu.library.ServiceAndRepository;
 
-
-import br.com.edu.library.LibraryManagerApplication;
 import br.com.edu.library.domain.Book;
 import br.com.edu.library.repository.BookRepository;
 import br.com.edu.library.service.impl.BookService;
@@ -15,8 +13,8 @@ import java.util.UUID;
 import static org.assertj.core.api.AssertionsForClassTypes.assertThat;
 import static org.mockito.Mockito.*;
 
-@SpringBootTest(classes = LibraryManagerApplication.class)
-public class LivroMockTeste {
+@SpringBootTest
+public class LivroMockTest {
 
     @Autowired
     private BookService service;

@@ -14,7 +14,7 @@ import static org.assertj.core.api.AssertionsForClassTypes.assertThat;
 import static org.mockito.Mockito.*;
 
 @SpringBootTest(classes = LibraryManagerApplication.class)
-public class StudentMockTeste {
+public class StudentMockTest {
 
 
     @Autowired
