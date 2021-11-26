@@ -10,14 +10,14 @@ import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.boot.test.mock.mockito.MockBean;
-
+import org.springframework.http.HttpStatus;
 
 import static org.assertj.core.api.Assertions.assertThat;
-import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
 
 @SpringBootTest(classes = LibraryManagerApplication.class)
-public class TestLibrary {
+public class LibraryCreateTest {
+
     @Autowired
     private LibraryController controller;
 
@@ -27,15 +27,18 @@ public class TestLibrary {
     @Autowired
     private LibraryRepository repository;
 
+
     @Test
-    public void testGetLibrary() throws Exception{
+    public void testGet() throws Exception{
         LibraryDTO dto = new LibraryDTO();
         dto.setName("Teste");
         dto.setInstitution("Faficc");
+
+
         Library resultado = dto.to();
 
         when(service.save(resultado)).thenReturn(repository.save(resultado));
-        assertThat(service.save(resultado).getName()).isEqualTo(resultado.getName());
-        verify(service).save(resultado);
+        assertThat(controller.create(dto).getStatusCode()).isEqualTo(HttpStatus.OK);
+
     }
 }

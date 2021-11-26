@@ -2,48 +2,57 @@ package br.com.edu.library.ControllerAndRepository.booktestes;
 
 import br.com.edu.library.LibraryManagerApplication;
 import br.com.edu.library.domain.Book;
-import br.com.edu.library.domain.Library;
 import br.com.edu.library.dto.impl.BookDTO;
-import br.com.edu.library.dto.impl.LibraryDTO;
 import br.com.edu.library.enumerators.BookField;
-import br.com.edu.library.repository.BookRepository;
-import br.com.edu.library.repository.LibraryRepository;
 import br.com.edu.library.service.impl.BookService;
 import br.com.edu.library.service.impl.LibraryService;
+import org.junit.jupiter.api.Order;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.boot.test.mock.mockito.MockBean;
+
+import java.util.UUID;
 
 import static org.assertj.core.api.AssertionsForClassTypes.assertThat;
-import static org.mockito.Mockito.verify;
-import static org.mockito.Mockito.when;
 
 @SpringBootTest(classes = LibraryManagerApplication.class)
-public class BookDtoTeste2 {
-
-    @MockBean
-    private BookService service;
+public class BookDtoDeleteTest {
 
     @Autowired
-    private BookRepository repository;
+    private BookService service;
 
+    private static UUID bookId;
 
+    @Autowired
+    private LibraryService libraryService;
+
+    @Order(1)
     @Test
-    public void testGetBook() throws Exception{
+    public void testCreateBookDto() throws Exception{
         BookDTO dto = new BookDTO();
-        dto.setName("book2");
+
+
+        dto.setIsbn("4G");
+        dto.setName("Testes");
         dto.setField(BookField.EXACT);
-        dto.setIsbn("4A");
+
+        Book result = service.save(dto.to());
+        bookId = result.getId();
 
 
-        Book result = dto.to();
-
-        when(service.save(result)).thenReturn(repository.save(result));
-        assertThat(service.save(result).getName()).isEqualTo(result.getName());
-        verify(service).save(result);
+        assertThat(result.getName()).isEqualTo(dto.getName());
 
 
 
     }
+
+    @Order(2)
+    @Test
+    public void testDeleteDto() throws Exception{
+
+        assertThat(service.deleteById(bookId)).isTrue();
+
+    }
+
+
 }

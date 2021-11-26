@@ -16,7 +16,7 @@ import static org.assertj.core.api.Assertions.assertThat;
 import static org.mockito.Mockito.when;
 
 @SpringBootTest(classes = LibraryManagerApplication.class)
-public class BookDtoTeste {
+public class BookDtoTest {
 
     @Autowired
     private BookController controller;
